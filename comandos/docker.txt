@@ -1,0 +1,35 @@
+Comandos Docker
+    docker ps                                   - Mostrar quantos e quais containter estã executando na maquina
+    docker ps -a                                - Mostra todos os container, mesmo os que não estão em execução
+
+    docker run [flags] <imagem> [comando]       - Executa um container a partir de uma imagem, com opções adicionais e um comando específico
+    docker stop <container_id>                  - Para um container em execução
+    docker rm <container_id>                    - Remove um container (deve estar parado)
+    docker start <container_id>                 - Inicia um container parado
+    docker exec -it <container_id> <comando>    - Executa um comando dentro de um container em execução, com opções para manter o terminal 
+        aberto e alocar um pseudo-T
+
+Exemplos:
+    docker run hello-world                      - Excuta uma imagem (no caso a imagem oficiona hello-world que esta no docker hub https://hub.docker.com/_/hello-world)
+    docker run ubuntu                           - Excuta a imagem do ubuntu, mas não tem nenhum comando para executar, então o container é finalizado imediatamente
+    docker run -it ubuntu bash                  - Excuta a imagem do ubuntu, mas com o comando bash, e o -it é para manter o terminal aberto, ou seja, o container fica em execução
+    
+    docker stop 5b2a04d64a1b                    - Para o container com o id 5b2a04d64a1b
+    docker start 5b2a04d64a1b                   - Inicia o container com o id 5b2a04d64a1b
+    docker exec -it 5b2a04d64a1b bash           - Executa o comando bash dentro do container com o id 5b2a04d64a1b, mantendo o terminal aberto e alocando um pseudo-TTY
+    docker rm 5b2a04d64a1b                      - Remove o container com o id 5b2a04d64a1b (deve estar parado para ser removido)
+
+Flags:
+    -a: Mostra todos os container, mesmo os que não estão em execução
+    -i: Modo interativo, mantém o terminal aberto
+    -t: Aloca um pseudo-TTY, permitindo a interação com o container
+    -it: Combinação de -i e -t, para manter o terminal aberto e alocar um pseudo-TTY
+    -d: Executa o container em segundo plano (detached mode)
+
+Notas:
+    - O comando "docker run" é usado para criar e iniciar um novo container a partir de uma imagem especificada.
+    - O comando "docker ps" é usado para listar os containers em execução, enquanto "docker ps -a" lista todos os containers, incluindo os que não estão em execução.
+    - As flags são usadas para modificar o comportamento dos comandos, como manter o terminal aberto ou executar o container em segundo plano.
+
+    - Um pseudo-TTY é uma interface de terminal virtual que permite a interação com o container como se fosse um terminal real. 
+        Ele é alocado quando usamos a flag -t, permitindo que possamos digitar comandos e receber respostas diretamente no terminal do container.
