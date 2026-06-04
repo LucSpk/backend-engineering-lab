@@ -17,8 +17,8 @@ public class HelloController {
     }
 
     public static class Hello {
-        public String message;
-        public String technology;
+        public final String message;
+        public final String technology;
 
         public Hello(String message, String technology) {
             this.message = message;

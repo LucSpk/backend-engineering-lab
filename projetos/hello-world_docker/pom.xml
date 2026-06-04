@@ -14,7 +14,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>hello-world-docker</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Hello World Docker</name>
     <description>Aplicação Spring Boot Hello World com Docker</description>
 
@@ -38,6 +38,8 @@
     </dependencies>
 
     <build>
+        <directory>${project.basedir}/target/builds</directory>
+    
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
