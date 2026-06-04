@@ -3,3 +3,20 @@ Basic Taxonomy in Docker
     - Container
     - Imagens
     - Registros
+
+Dockerfiles 
+    - São arquivos dentro da aplicação que representão um projeto da arquitetura da aplicação para que ela funcione corretamente usados para criar a imagem Docker
+
+Containers 
+    - São uma instancia de uma imagem, ou seja uma imagem só que em execução
+
+Imagens (Images)
+    - São pacotes de software leves, autônomos e executaveis que contém tudo o que é necessário para rodar uma aplicação: código, bibliotecas, dependências, ferramentas e configurações.
+
+Registros (Registry)
+    - São um sistemas centralizados de armazenamento e distribuição onde as imagens Docker são salvas e compartilhadas.
+        - Existem vários
+            - O da AWS que é (AWS registry)
+            - A Azure também possui o seu
+            - Dockerhub
+        - Exemplo imagem do node, .Net, Java
