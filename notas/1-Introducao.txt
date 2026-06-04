@@ -1,0 +1,24 @@
+O que é Doker?
+    Docker é um serviço de virtualização
+            -> Permite criar aplicação independente do ambiente onde esta sendo desenvolvido
+                -> Através do serviço de virtualização é possivel fazer o deploy da aplicação com todas as dependencias necessárias para a execução da aplicação.
+
+        Separa as acplicações em containers 
+        Utiliza os SO do computador hospedeiro
+            -> Separa os recursos entre os containers e cada container roda de maneira independente sem enchergar os outros containers
+                    -> Divisão feita através de cgroups e namespcase
+                -> Cada container tem uma parte dos recursos da maquina 
+                -> Separação de interface de rede
+                -> Cada um vai ter suas variáveis de sistema
+            
+            Ou seja cada container é uma verção "zero" do sistema operacional do hospedeiro
+
+Porque usar Doker?
+    Ele virtualiza todo o ambiente necessário para rodar a aplicação
+            - Dependencias
+            - Configurações
+            - Etc.
+        Isso permite executar a aplicação no mesmo ambiente em máquinas diferentes
+        Isso se chama (Virtualizar o ambiente)
+    
+    Por rodar com o SO do hospedeiro é mais que Maquinas Virtuais (VM rodam cada uma um SO no mesmo hardware)
