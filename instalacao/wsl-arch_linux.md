@@ -35,3 +35,25 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 Após executar esse comando, você precisará sair e entrar novamente na sessão WSL para que as mudanças tenham efeito. Alternativamente, execute `newgrp docker` para ativar o grupo na sessão atual.
+
+
+## Para parar o serviço do Docker:
+```bash
+sudo systemctl stop docker
+```
+
+## Para Impedir que o serviço do Docker inicie automaticamente com o sistema:
+```bash
+sudo systemctl disable docker
+```
+ou 
+```bash
+sudo systemctl disable docker.service
+sudo systemctl disable docker.socket
+```
+
+Ambas as formas funcionam, mas há uma diferença:
+
+sudo systemctl disable docker - desabilita o serviço principal, mas o docker.socket ainda pode ativar o daemon automaticamente quando você tentar usar Docker (ativação por socket).
+
+sudo systemctl disable docker.service + sudo systemctl disable docker.socket - desabilita ambos, impedindo completamente a inicialização automática.
