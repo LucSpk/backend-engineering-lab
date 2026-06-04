@@ -31,6 +31,17 @@ hello-world_docker/
 ```bash
 mvn clean spring-boot:run
 ```
+<br /> 
+
+- Para criar o JAR use o comando: `mvn clean install` o resultado vai ser gerado na pasta: 
+```
+target/builds/hello-world-docker-1.0.0-SNAPSHOT.jar
+```
+
+- Para executar o JAR use o comando: 
+```bash
+java -jar target/builds/hello-world-docker-1.0.0-SNAPSHOT.jar
+```
 
 2. **Acessar a aplicação:**
 - Text: http://localhost:8080/
