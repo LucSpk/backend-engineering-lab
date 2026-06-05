@@ -8,6 +8,8 @@ Comandos Docker
     docker start <container_id>                 - Inicia um container parado
     docker exec -it <container_id> <comando>    - Executa um comando dentro de um container em execução, com opções para manter o terminal 
         aberto e alocar um pseudo-T
+    docker build -t <nome_da_imagem> <diretório_do_dockerfile>  - Constrói uma imagem a partir de um Dockerfile localizado em um diretório específico, 
+        e atribui um nome à imagem
 
 Exemplos:
     docker run hello-world                      - Excuta uma imagem (no caso a imagem oficiona hello-world que esta no docker hub https://hub.docker.com/_/hello-world)
