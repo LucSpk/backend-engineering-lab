@@ -13,7 +13,7 @@ RUN mvn clean install
 
 
 # Estágio 2: Runtime - Baixa a imagem do OpenJDK 17 JRE para a fase de runtime (imagem menor)
-FROM openjdk:17-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 
 # Copia o JAR gerado para a fase de runtime (runtime é a fase final da imagem, onde a aplicação será executada)
 COPY --from=build /app/target/builds/hello-world-docker-1.0.0-SNAPSHOT.jar /app/hello-world-docker.jar
