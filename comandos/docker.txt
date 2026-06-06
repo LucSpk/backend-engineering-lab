@@ -11,7 +11,7 @@ Comandos Docker
     docker build -t <nome_da_imagem> <diretório_do_dockerfile>  - Constrói uma imagem a partir de um Dockerfile localizado em um diretório específico, 
         e atribui um nome à imagem
 
-    docker login -u <usuario> -p <senha> <registro>  - Faz login em um registro de contêineres, como o Docker Hub, usando um nome de usuário e senha
+    docker login -u <usuario>                   - Faz login em um registro de imagens Docker (como o Docker Hub) usando um nome de usuário
 
     docker run -P <imagem>                      - Executa um container e mapeia automaticamente as portas expostas pela imagem para portas disponíveis na máquina host
     docker run -p <porta_host>:<porta_container> <imagem>  - Executa um container e mapeia uma porta específica da máquina host para uma porta específica do container
