@@ -13,6 +13,9 @@ Comandos Docker
 
     docker login -u <usuario>                   - Faz login em um registro de imagens Docker (como o Docker Hub) usando um nome de usuário
 
+    docker build --platform <plataforma> -t <nome_da_imagem> <diretório_do_dockerfile>  - Constrói uma imagem para uma plataforma específica (como linux/amd64 ou linux/arm64) a partir de um Dockerfile, 
+        e atribui um nome à imagem
+
     docker run -P <imagem>                      - Executa um container e mapeia automaticamente as portas expostas pela imagem para portas disponíveis na máquina host
     docker run -p <porta_host>:<porta_container> <imagem>  - Executa um container e mapeia uma porta específica da máquina host para uma porta específica do container
 
@@ -40,3 +43,9 @@ Notas:
 
     - Um pseudo-TTY é uma interface de terminal virtual que permite a interação com o container como se fosse um terminal real. 
         Ele é alocado quando usamos a flag -t, permitindo que possamos digitar comandos e receber respostas diretamente no terminal do container.
+
+    - Quando é usado --platform, as plataformas possiveis são:
+        linux/amd64: Para sistemas operacionais Linux rodando em arquitetura AMD64 (x86_64)
+        linux/arm64: Para sistemas operacionais Linux rodando em arquitetura ARM64 (aarch64)
+        windows/amd64: Para sistemas operacionais Windows rodando em arquitetura AMD64 (x86_64)
+        
