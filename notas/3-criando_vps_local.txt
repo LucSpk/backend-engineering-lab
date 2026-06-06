@@ -1,0 +1,4 @@
+1. Instalar e configurar um servidor SSH no WSL:
+    sudo apt update
+    sudo apt install openssh-server
+    sudo service ssh start
