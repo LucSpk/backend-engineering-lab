@@ -1,4 +1,15 @@
-1. Instalar e configurar um servidor SSH no WSL:
+1. Atualiza dependencias e o sistema operacional da máquina virtual para garantir que tudo esteja atualizado e seguro:
     sudo apt update
-    sudo apt install openssh-server
-    sudo service ssh start
+    sudo apt upgrade -y
+
+2. Instala as dependências necessárias para o Docker, como certificados, curl e gnupg:
+    sudo apt install -y ca-certificates curl gnupg
+
+3. Permitir usar Docker sem sudo
+    sudo usermod -aG docker $USER
+
+4. Cria imagem 
+    docker build -t <usuario>/meu-app:<tag> .
+
+5. Baixa a imagem do Docker Hub
+    docker pull <usuario>/meu-app:<tag>
