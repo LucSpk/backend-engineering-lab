@@ -1,0 +1,42 @@
+Kafka é uma plataforma de streaming distribuída que permite o processamento em tempo real de grandes volumes de dados. 
+    Broker kafka são servidores do kafka
+    CLuster são grupos de brokers
+    
+    streaming é um fluxo continuo de dados, onde os dados são processados à medida que chegam, em vez de serem armazenados e processados posteriormente.
+    Porcessos batch é um processo onde os dados são coletados, armazenados e processados em lotes, geralmente em intervalos regulares.
+    Kafka é projetado para ser escalável, tolerante a falhas e de alto desempenho, permitindo que as empresas processem e analisem grandes volumes de dados em tempo real.
+
+    Usos comuns do Kafka incluem:
+        - Log analysis
+        - Data streaming in recommendation systems
+        - System monitoring and alerting
+        - Change data capture (CDC)
+        - System migration
+
+Producer -> | ---- Topic ---- | -> Consumer
+
+
+Kafka connect
+ksql
+
+Ver sobre Flink, Spark e Storm para processamento de dados em tempo real.
+
+        ┌──────────────────────────────────────────────────────────────────────────────┐
+        │                                    KSQLDB                                    │
+        │       ┌──────────┐                                       ┌───────────┐       │
+        │       │  TABLES  │←────────────────╮    ╭───────────────→│  STREAMS  │       │
+        │       └──────────┘              ┌──┴────┴──┐             └───────────┘       │
+        │                                 │  KSQLDB  │                                 │
+        │                                 └────┬───┬─┘                                 │
+        └──────────────────────────────────────┼───┼───────────────────────────────────┘
+                                               │   ╎
+                                              SQL  ╎ Create Conectors
+                                               │   ╎
+                                               │   ╎
+        ┌──────────────────────────────────────┼───┼───────────────────────────────────┐
+        │                                      │   ╎                                   │
+        │                                 ┌────┴───┴──┐                                │
+        │                                 │  TOPICS   │                                │
+        │                                 └────────┬──┘                                │  
+        │                                          ╎                                   │
+        └──────────────────────────────────────────┼───────────────────────────────────┘
