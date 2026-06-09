@@ -19,4 +19,10 @@ Producer -> | ---- Topic ---- | -> Consumer
 Kafka connect
 ksql
 
+
+Para entender de forma visual, veja o link abaixo:
+https://softwaremill.com/kafka-visualisation/
+
+
+Notas:
 Ver sobre Flink, Spark e Storm para processamento de dados em tempo real.

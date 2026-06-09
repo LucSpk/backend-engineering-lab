@@ -1,0 +1,35 @@
+
+┌────────────┐
+| Pordutores |
+└────────────┘
+    |
+Mensagens são publicadas
+    ↓
+┌────────────┐                                                  ┌────────────┐
+| Menasagens |────────>Mensagens podem ou não possuir chaves ──>|    keys    |
+└────────────┘                                                  └────────────┘ 
+    |
+São armazenadas em topicos
+    ↓
+┌────────┐           ┌───────────────────────────────────────────────────────────┐
+| Topico | ────────> | Pense como se fosse uma tabela que vai guardar seus dados |
+└────────┘           └───────────────────────────────────────────────────────────┘
+    |
+Que replica esses 
+dados em partições
+    ↓
+┌──────────┐
+| Partição |
+└──────────┘
+    ↑
+Dados são consumidos
+    |
+┌────────────────────────┐
+| Grupos de Consumidores |
+└────────────────────────┘
+    ↑
+Através de 
+    |
+┌──────────────┐
+| Consumidores |
+└──────────────┘
