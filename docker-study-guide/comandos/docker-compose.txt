@@ -1,0 +1,7 @@
+Comandos Docker Compose
+    docker compose up -d                         - Inicia os serviços definidos no arquivo docker-compose.yml em segundo plano (detached mode)
+    docker compose down                          - Para e remove os containers, redes e volumes definidos no arquivo docker-compose.yml
+    docker compose ps                            - Lista os containers em execução para os serviços definidos no arquivo docker-compose.yml
+    docker compose logs                          - Exibe os logs dos serviços definidos no arquivo docker-compose.yml
+    docker compose build                         - Constrói ou reconstrói as imagens para os serviços definidos no arquivo docker-compose.yml
+    docker compose exec <serviço> <comando>      - Executa um comando dentro de um container em execução para um serviço específico definido no arquivo docker-compose.yml 
