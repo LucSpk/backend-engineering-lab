@@ -1,3 +1,0 @@
-Na pasta onde esta o docker-compose.yml, execute o comando para iniciar os serviços do Kafka.
-    - Comando: `docker compose up -d`
-

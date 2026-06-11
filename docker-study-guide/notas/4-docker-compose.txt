@@ -1,0 +1,2 @@
+A ordem de configuração dos serviços no arquivo docker-compose.yml é importante, os serviços são iniciados na ordem em que 
+    estão definidos. 
