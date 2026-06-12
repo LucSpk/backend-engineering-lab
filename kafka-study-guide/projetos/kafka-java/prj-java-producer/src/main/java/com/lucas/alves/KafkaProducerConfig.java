@@ -21,7 +21,7 @@ public class KafkaProducerConfig {
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
         try {
-            producer.partitionsFor("meu-topico");
+            producer.partitionsFor("mensagens");
             System.out.println("✅ Conexão com o Kafka realizada com sucesso.");
         } catch (Exception e) {
             System.err.println("❌ Erro ao conectar no Kafka: " + e.getMessage());
