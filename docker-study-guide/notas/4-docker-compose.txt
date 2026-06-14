@@ -1,2 +1,17 @@
 A ordem de configuração dos serviços no arquivo docker-compose.yml é importante, os serviços são iniciados na ordem em que 
     estão definidos. 
+
+    docker compose version              - Mostra a versão instalada do Docker Compose
+
+    docker compose up -d                - Cria, baixa as imagens e inicia todos os containers do arquivo em segundo plano
+
+    docker compose down                 - Para e remove os containers e as redes criadas pelo arquivo Compose
+    docker compose down -v              - Para e remove tudo (containers, redes) e deleta todos os volumes
+
+
+
+Flags
+    -d (ou --detach):       Ativa o modo "detached" (desacoplado), liberando o seu terminal para uso
+    -V (ou --volumes):      Tem usos bem restritos e muda de comportamento dependendo do comando que você executa.
+        docker compose down -v (Remover Volumes)
+        docker compose cp -v (Preservar Permissões) 
