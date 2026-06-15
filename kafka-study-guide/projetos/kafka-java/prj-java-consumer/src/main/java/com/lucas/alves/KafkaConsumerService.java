@@ -37,7 +37,6 @@ public class KafkaConsumerService {
         consumer.close();
     }
 
-    @PostConstruct
     public void read() {
         while(running){
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
