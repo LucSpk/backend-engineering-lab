@@ -25,7 +25,9 @@ public class KafkaConsumerService {
 
     @PostConstruct
     public void start() {
-        new Thread(this::read).start();
+        Thread consumerThread = new Thread(this::read);
+        consumerThread.setName("kafka-consumer-thread");
+        consumerThread.start();
     }
 
     @PreDestroy
@@ -37,7 +39,7 @@ public class KafkaConsumerService {
 
     @PostConstruct
     public void read() {
-        while(true){
+        while(running){
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
                 System.out.println("Mensagem Lida: " + record.value());
