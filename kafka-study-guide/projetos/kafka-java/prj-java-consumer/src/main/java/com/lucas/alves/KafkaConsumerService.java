@@ -8,9 +8,9 @@ public class KafkaConsumerService {
     private static final String TOPIC = "mensagens";
 
     @KafkaListener(topics = TOPIC)
-    public void read(String mensagem) {
+    public void read(Temperatura mensagem) {
         try {
-            System.out.println("Mensagem Lida: [" + mensagem + "]");
+            System.out.println("Temperatura: [" + mensagem.temp() + "]");
         } catch (Exception e) {
             e.printStackTrace();
         }
