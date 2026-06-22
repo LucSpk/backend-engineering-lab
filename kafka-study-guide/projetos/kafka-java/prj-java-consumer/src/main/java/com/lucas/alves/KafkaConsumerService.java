@@ -16,3 +16,10 @@ public class KafkaConsumerService {
         }
     }
 }
+
+record Temperatura(String unidade, String temp, String timeStamp) {
+    @Override
+    public final String toString() {
+        return timeStamp + " - " + temp + " " + unidade;
+    }
+}
